@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>피망 - 애스커 :: 당신의 액션에 답하다 [RE]:Action, Asker</title>
+	<link rel="stylesheet" type="text/css" href="http://file.pmang.com/images/pmang/asker/ob/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="http://file.pmang.com/images/pmang/asker/ob/css/page.css">
+	<script type="text/javascript" src="http://www.pmang.com/global/javascript/jquery.js"></script>	
+	<script type="text/javascript" src="http://www.pmang.com/global/javascript/html.js"></script>
+	<script  type="text/javascript" src="http://file.pmang.com/images/pmang/asker/ob/js/368_ui.js"></script>
+</head>
+<body class="layout_sub">
+
+<!-- 임시 GNB 개발시 삭제 -->
+<div style="height:40px; border-bottom:3px solid red; background:#fff;position:relative;z-index:100"></div>
+<!-- 임시 GNB 개발시 삭제 -->
+<div id="ak_wrapper" class="wrapper">
+	<div id="sub_contents" class="container">
+		<div class="container_in info class">
+			<div class="sub_head_box">
+				<h2 class="tl"><img src="http://file.pmang.com/images/pmang/asker/ob/img/info/h2_class.gif" alt="클래스" /></h2>
+			</div>
+			<ul class="type_txt">
+				<li><a href="#">소울브레이커</a></li>
+				<li><a href="#">템페스트</a></li>
+				<li><a href="#">플레어</a></li>
+				<li class="on"><a href="#">블러드</a></li>
+			</ul>
+			<div class="section blood">
+				<span class="bg_img"></span>
+				<p><strong>캐릭터 스토리</strong></p>
+				<p>자신이 가장 저주하는 사내의 심장과 가장 사랑하는 여인의 눈을 이식받는 순간 운명의 수레바퀴가 뒤틀리기 시작했다.<br />사랑하는 사람의 눈이 유일한 살인의 목격자이자 공범자이며, 가장 저주하는 자의 심장을 살려야 자신도 살 수 있는 불운한 운명을 살아가고 있다. <br />뒤틀린 운명 속에서 타인의 심장과 피를 흡수하지 않으면 생존할 수 없다는 사실이 매 순간 블러드의 본능을 일깨운다.</p>
+				<p><strong>전투 컨셉</strong></p>
+				<p>피를 흡수하고 채우는 스킬과 모드를 활용하는 위험을 감수하고 전투를 극대화 시키는 호전적인 타입.<br />순간 이동, 회피. 공격이 동시에 가능한 정교한 조작을 요구하는 클래스.</p> 
+				<p><strong>전투스타일</strong></p>
+				<p>빠른 공격 발동과 자유로운 이동으로 공격과 회피를 빠르게 전환 할 수 있다.<br />자신의 모습을 순간적으로 감추는 스킬들을 활용하여 기습적인 공격이 가능한 특징이 있다.<br />자신의 체력을 소모하여 스킬을 사용하고 다시 체력을 회복하는 등의 조작의 정교함을 요구한다.<br />마나를 사용하지 않고, 클래스 고유의 블러드 게이지를 활용하는 클래스이다.</p>
+				<a href="#" class="btn">블러드 스킬정보 보러가기</a>
+			</div>
+		</div>
+	</div><!-- //container -->
+</div>
+<!--  개발 시 삭제 -->
+<style>
+#ui-helper {z-index: 999999}
+</style>
+<script type="text/javascript">
+	var mn = 1
+	$.getScript('http://ndl.ds.neowiz.com/~ji9/ui-helper/js/jquery.ui-helper.js');
+	$.u = {
+		theme: 'mini', // [flat || mini || legacy]
+		color: '#e81818', // if theme:'flat' ex) [#000000 || red]
+		marginLeft: -600, // start left position
+		animate: false, // start then move left position animation
+		position: 'fixed', // [fixed || absolute || static]
+		top: 500, // panel top position
+		draggable: true, // [true || false]
+		movementX: false, // if draggable, only horizon movement
+		helper : [
+			{
+				title : '기본 동작',
+				fold : false, // start then, pane fold [true || false]
+				items : [
+					{
+						subject : '로그인/멤버클래스 추가',
+						description : '로그인 전/후 토글하기',
+						value : 'button',
+						input : 'button', // [radio || checkbox || button]
+						checked : false, // default checked option
+						run : function() {
+							$('.loginbox .login').toggle();
+							$('.loginbox .logout').toggle()
+						}
+					},
+					{
+						subject : '로그인후 캐릭터 있을때',
+						description : '',
+						value : 'button',
+						input : 'button', // [radio || checkbox || button]
+						checked : false, // default checked option
+						run : function() {
+							$('.loginbox .logout').removeClass('crt_yes').addClass('crt_no')
+						}
+					},
+					{
+						subject : '로그인후 캐릭터 없을때',
+						description : '',
+						value : 'button',
+						input : 'button', // [radio || checkbox || button]
+						checked : false, // default checked option
+						run : function() {
+							$('.loginbox .logout').removeClass('crt_no').addClass('crt_yes')
+						}
+					}
+				]
+			}
+		]
+	}
+</script>
+<!-- 개발 시 삭제 -->
+
+</body>
+</html>

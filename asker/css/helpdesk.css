@@ -1,0 +1,345 @@
+@charset "euc-kr";
+#dv_support {width: 1100px; background: #fff; position: relative;}
+.layout_sub div.page{position:relative;padding:74px 39px;margin:0 auto;width:1000px;min-height:1000px;border:1px solid #dededc;border-width:0 1px}
+.layout_sub div.page .page-header h2{min-height:60px;padding-left:8px;background:url(../img/helpdesk/h2_helpdesk.gif) no-repeat;text-indent:-999px;overflow:hidden;width:112px;height:31px}
+.layout_sub div.page .page-header small{display:none}
+
+/* select box */
+.SelectHelpdesk {height:42px; }
+.SelectHelpdeskResetStyle {overflow: visible; visibility: visible; float: none; position: static; left: auto; top: auto; right: auto; bottom: auto; width: auto; height: auto; min-width: auto; min-height: auto; max-width: auto; max-height: auto; margin: 0; padding: 0; border: none; background: none; text-align: left;}
+.SelectHelpdeskDisable {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50) !important; opacity: 0.5;}
+.SelectHelpdesk_selectArea {overflow: hidden; height: 42px; vertical-align: top; z-index: 20; background: url(../img/common/bg_select_left.png) no-repeat 0 0;left:0 !important;max-width:122px }
+.SelectHelpdesk_selectArea a {display: block; margin: 0 0 0 7px; padding: 14px 33px 14px 5px; font-size: 13px; white-space: nowrap; color:#000; background: url(../img/common/bg_select_right.png) no-repeat 100% 0; cursor: default; letter-spacing: 0; text-overflow: ellipsis; overflow: hidden;}
+.SelectHelpdesk_selectArea a:hover {text-decoration: none;}
+.SelectHelpdesk_optionsDiv {display: none; margin-top: 42px; background: #FFF; vertical-align: middle; z-index: 19;max-width:122px}
+.SelectHelpdesk_optionsDiv p {margin: -1px 0 0 0; border: 1px solid #dfdfdf; padding: 9px 0; overflow-y: auto; overflow-x: hidden; max-height: 307px; -webkit-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 0 5px 1px #ededed; box-shadow: inset 0 0 5px 1px #ededed;}
+.SelectHelpdesk_optionsDiv a {display: block; padding: 6px 21px 6px 21px; white-space: nowrap; color: #777; cursor: default; font-size: 13px; overflow: hidden; text-overflow: ellipsis;}
+.SelectHelpdesk_optionsDiv a:hover {background: #eeeeee; color:#000 !important; text-decoration: none;}
+.SelectHelpdesk_optionsDiv_reverse {}
+/* tab */
+ul.tab { position: relative;border-top:1px solid #8c8c8d; border-bottom: 1px solid #e5e5e9;background: #eeeff1;_zoom: 1;height:60px;margin-bottom:60px}
+ul.tab>li {float: left; height: 60px;background:url(../img/bbs/bar.gif) no-repeat left 50%}
+ul.tab>li:first-child{background-image:none}
+ul.tab>li.on {background:#fff;background-image:none;margin-right:-1px;height:61px;border: 1px solid #d8d9da;border-width:0 1px}
+ul.tab>li>a { padding: 23px 24px 9px 24px; height: 28px; font-size: 14px; color: #000; display: inline-block;letter-spacing:-1px;}
+ul.tab>li.on>a {color: #000;margin-bottom:1px}
+
+#dv_support div.header {display:none;}
+#dv_support div.header h1 {display:none;}
+#dv_support div.header .history { display:none; }
+
+.helpDesk .hd_menu {height: 163px; background: url(../img/helpdesk/bg_helpdesk_head.gif) repeat-x 0 0;}
+.hd_menu ul.faq {height:38px; padding:39px 0 0 181px;background:url(../img/helpdesk/txt_helpdesk_head.gif) no-repeat 31px 39px}
+.hd_menu ul.mtm {padding:36px 0 0 181px;background:url(../img/helpdesk/txt_helpdesk_head.gif) no-repeat 31px -47px}
+.hd_menu li { display:inline; }
+.hd_menu li a { font-size:13px; color:#000;}
+.hd_menu a.on {font-weight:bold; color:#5d6f9f !important ;}
+.hd_menu li.bar {position:relative; top:0px; padding:0 5px; font-size:11px; color:#969694; font-weight:normal;}
+.hd_faq_question {position: relative;margin-bottom:50px}
+.hd_faq_question h3 {padding: 60px 0 0 7px; height: 36px;}
+.hd_faq_question .box {height: 70px;position: relative;padding:30px;}
+.hd_faq_question .search {position: relative;background: url(../img/helpdesk/bg_helpdesk_search.gif) no-repeat 100% 100%;height:42px}
+.hd_faq_question .SelectHelpdesk {position: absolute; left: 50px; top:0px; width: 156px;}
+
+.hd_faq_question .search input { position:absolute; left:131px; top:0px; width: 740px; font-size: 13px; color: #787879; background: transparent; line-height: 15px; padding: 15px 0px 11px 10px; font-family:'NanumBarunGothicBold','nbgb';}
+.hd_faq_question .search a.btn_search { position:absolute; right: 0px; top: 0px;left:auto; display: block; width: 40px; height: 40px; text-indent: -9999px;background:none}
+.hd_faq_question .search label { position:absolute; right:0px; top:55px; }
+.hd_faq_question .search label input { position:static !important; width:auto !important; padding: 0 !important; vertical-align: middle; margin: 2px 5px 0 0 ;}
+.hd_faq_question .search label i { vertical-align:bottom; font-style:normal; font-size:11px; color:#908f74; }
+
+
+.hd_faq_question .top5 { position:absolute; left: 37px; top: 82px;background:url(../img/helpdesk/ico_best_word.gif) 0% 0% no-repeat; height:21px; padding:3px 0 0 86px; }
+.hd_faq_question .top5 li { display:inline}
+.hd_faq_question .top5 li.bar {color:#dededb; padding: 0 7px;}
+.hd_faq_question .top5 li a { color:#000}
+
+.hd_faq_top5 { position:relative; height:350px; background:url(../img/helpdesk/bg_faq_question.gif) no-repeat; }
+.hd_faq_top5 strong { position:absolute; left:-9999px; }
+.hd_faq_top5 .top5_1 { position:absolute; left: 0px; top: 62px; width: 424px;padding:0 30px;background:#f5f5f8 url(../img/helpdesk/bg_top_num.png) no-repeat 34px 15px;border-bottom: 1px solid #e5e5e9;}
+.hd_faq_top5 .top5_2 { position:absolute; right: 0px; top: 62px;width: 424px;padding:0 30px;background:#f5f5f8 url(../img/helpdesk/bg_top_num.png) no-repeat 34px 15px;border-bottom: 1px solid #e5e5e9;}
+.hd_faq_top5 li {padding:16px 0 13px 0;border-bottom: 1px solid #e5e5e9;}
+.hd_faq_top5 li:last-child{border-bottom:0}
+.hd_faq_top5 li a {display: block; padding-left : 38px; font-size: 13px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color:#000;}
+
+.hd_faq_list { position:relative;}
+.hd_faq_list .msg{position:absolute;width:100%;top:95px;text-align:right; margin-bottom:10px;color:#000}
+.hd_faq_list .msg strong {font-weight:bold; color:#3e74b4; font-weight: normal;}
+.hd_faq_list .msg p{float:left}
+.hd_faq_list .listx { position:relative; height:149px; margin:0; padding:10px 0 0 15px;}
+.hd_faq_list .listx li {height:16px;}
+.hd_faq_list .listx li.noti {display:block; color:#908f74; padding:0 0 20px 0; height:auto;}
+.hd_faq_list .listx .noti p a {position:absolute; left:15px; top:130px;}
+
+.hd_faq_list .sort li {display:inline; margin:0 -1px 0 0; padding:0 8px 0 8px; background:url(../img/helpdesk/bg_sort_bar.gif) 0 0 no-repeat; font-size:11px;  line-height:1.4;}
+.hd_faq_list .sort li:first-child {background: none;}
+.hd_faq_list .sort li a {font-size:13px; color:#b5b5b5 !important;}
+.hd_faq_list .sort .on a { color:#000 !important; font-weight:bold; text-decoration:none; }
+.hd_faq_list .total{float:left;color:#000;padding-left:7px}
+.hd_faq_list .total em{color:#5d6f9e}
+
+.hd_faq_list table.list  {width: 100%; table-layout: fixed;border-top:1px solid #e5e5e9}
+	/* col width */
+	.hd_faq_list table.list th.category {width: 140px; padding-left: 50px;}
+	.hd_faq_list table.list td.subject {padding-left: 50px;}
+	.hd_faq_list table.list .update {width: 150px;}
+	.hd_faq_list table.list .count {width: 100px;}
+
+
+.hd_faq_list table.list th, .hd_faq_list table.list td {text-align: left; vertical-align: middle; border-bottom: 1px solid #e7e7e7;}
+.hd_faq_list table.list th {height: 60px; color: #000; font-weight: normal;}
+.hd_faq_list table.list td {height: 60px; color: #999; font-size: 12px;}
+.hd_faq_list table.list td p,.hd_faq_list table.list th p {white-space: nowrap; overflow: hidden; text-overflow: ellipsis; white-space: normal; width: 100%}
+.hd_faq_list table.list td.subject p strong {display: inline-block; width: 140px; font-weight: normal; color:#000;}
+.hd_faq_list table.list td.subject p a strong {display: inline-block; width: auto;}
+.hd_faq_list table.list td a {font-size: 13px; color: #555; display: inline-block;}
+.hd_faq_list table.list td b {color: #3e74b4;}
+.hd_faq_list table.list td a:hover {text-decoration: underline;}
+
+.helpDesk .bbs_foot{overflow:hidden;padding:20px 0}
+.hd_foot {position:relative; height:35px; border-top: 1px solid #e7e7e7; padding:16px 0 0 0; margin:0; text-indent:-5000px; background:url(../img/helpdesk/bg_mantoman.gif) no-repeat 0 19px; zoom:1;clear:both}
+.hd_foot .mtm a { position:absolute;text-indent:0; overflow:hidden;left: 303px;    top: 19px;    display: block;    width: 70px;    height: 24px;}
+.hd_foot .mtm a img {visibility:hidden;}
+.hd_foot .btn{ position:absolute !important; right:0px; top:16px; text-indent:0;}
+.hd_foot .btn li {float:left; _display:inline; text-indent:0; }
+.hd_foot .btn a{color:#000;font-size:12px;margin-right:10px;padding-left:10px;background:url(../img/helpdesk/bg_sort_bar.gif) left top no-repeat;}
+.hd_foot .btn li:first-child a{background:none}
+.qa_read { background:none; }
+
+.top5px {height:25px; background:none;}
+.top5px * {text-indent:0 !important;}
+.top5px .btn a {margin:0 0 0 8px;}
+.top5px .move a {margin:0 8px 0 0;}
+
+.hd_answer {position:relative; margin:0 0 20px 0; overflow:hidden; zoom:1;}
+.hd_answer h4 { display:none; }
+.hd_answer .contents {padding:170px 45px 25px 45px;font-size: 15px; color: #000; line-height: 30px;overflow:hidden}
+.hd_answer p.title {position: absolute; left: 0; top: 0; width: 100%; padding:55px 0 55px 40px;; height: 20px; font-size: 25px; color:#07072d;; background:#f0f0f3;}
+.hd_answer p.title strong {font-weight: normal;}
+
+.hd_answer_c { position:relative; height:53px; *margin-top:-20px; background:url(../img/helpdesk/bg_answer.gif) left bottom no-repeat; text-indent:-5000px; }
+.hd_answer_c .yes {position:absolute; left:465px; top:22px; text-indent:0; color:#f0f0f0;}
+.hd_answer_c .no {position:absolute; left:523px; top:22px; text-indent:0; color:#f0f0f0;}
+.hd_answer_c .btn {position:absolute; left:570px; top:15px; text-indent:0;}
+.hd_answer_c input {vertical-align:top; margin:-4px 1px -3px -3px;}
+
+.hd_rating {position:relative; width: 1000px; margin:0 auto; zoom:1;}
+.hd_rating .rate {position:relative; height:55px;  padding:25px 0 0 19px;border:1px solid #e5e5e9; zoom:1;}
+.hd_rating .rate:after {content:'.'; display:block; clear:both; height:0; overflow:hidden; visibility:hidden;}
+.hd_rating h3 {position: absolute; left: 30px; top: 33px; font-size:15px; height:18px; color:#6d6d6d; font-weight: normal;}
+.hd_rating p.sub {position: absolute; left: 219px; top: 33px;font-size:15px; color:#6d6d6d;}
+.hd_rating em {color:#ec181e;}
+.hd_rating textarea {margin-top: 20px; clear:both; position:relative; width:958px; height:190px; padding:20px; border:1px solid #e5e5e9; text-align:left; background: url(../img/helpdesk/bg_rating_textarea.gif) no-repeat 12px 12px}
+.hd_rating p.limit {padding: 20px 20px 0 0; color:#000; text-align:right;font-size:12px}
+.hd_rating p.limit span {color:#5d6f9e;}
+.hd_rating .btn {margin:-20px 0 0 0; text-align:center; position: relative; text-indent: 0; padding-bottom: 50px;}
+.hd_rating .slider_placeholder {position:absolute; right:20px; top:35px; width:300px; height:29px; background:url(../img/helpdesk/img_graph.gif) no-repeat;}
+.hd_rating .rating_slider {position:absolute; z-index:3; left:-6px; top:-7px; width:300px; height:30px;}
+.hd_rating .ui-slider-handle {position:relative; display:block; width:13px; height:17px; background:url(../img/helpdesk/btn_handle.gif) no-repeat;}
+.hd_rating .rating_value {position:absolute; left:50%; top:-13px; width:30px; margin:0 0 0 -9px; text-align:center; border:none; background:none; font:bold 11px verdana; color:#000; letter-spacing:-1px;}
+.hd_par{position:relative;padding-top:16px;background:url(../img/helpdesk/bg_par_re.gif) no-repeat 0 19px;text-indent:-999px;overflow:hidden;border-top: 1px solid #e7e7e7;margin-top:-30px;height:30px}
+.hd_par div.re a {position:absolute;top:19px;left:330px;width:70px;height:24px}
+.hd_par div.re img {vertical-align: middle;}
+.hd_par h4, .hd_par p.msg { position:absolute; left:-5000px; top:-5000px; }
+
+.hd_login {position:relative; height:502px; background:url(../img/helpdesk/bg_login_required.gif) no-repeat;margin-bottom:125px }
+.hd_login a {position:absolute; top:535px;text-indent:-999px;overflow:hidden}
+.hd_login a.idpass{left:315px;background:url(../img/helpdesk/bg_login_idpass.gif) no-repeat;width:161px;height:51px}
+.hd_login a.join{right:315px;background:url(../img/helpdesk/bg_login_join.gif) no-repeat;width:180px;height:51px}
+.hd_login h3, .hd_login p{text-indent:-999px;overflow:hidden;font-size:0}
+.hd_login_ch {position:relative; height:546px; background:url(../img/helpdesk/bg_login_required_ch.gif) no-repeat; }
+.hd_login_ch a {position:absolute; top:379px; display:block; height:33px; text-indent:-5000px; }
+.hd_login_ch a.join { left:288px; width:97px; }
+.hd_login_ch a.idpass { left:390px; width:173px; }
+
+.hd_notice h3 {padding: 60px 0 20px 7px;}
+.hd_notice .list {zoom:1;}
+.hd_notice .list ul {position:relative; top:0; border-top:1px solid #e5e5e9; zoom:1;}
+.hd_notice .list ul li {padding:23px 40px 34px 35px; border-bottom:1px solid #e5e5e9; background:#f5f6f8;color:#000;text-align:right }
+.hd_notice .list ul li .category{width:148px;float:left;text-align:center}
+.hd_notice .list ul li .date{}
+.hd_notice .list ul li p {margin-top: -1px;}
+.hd_notice .list ul li a {float:left;color:#000; font-size: 13px;}
+.hd_notice .line {display:none;}
+
+.hd_qa_view {padding-top: 30px; overflow:hidden; zoom:1 }
+.hd_qa_view .question, 
+.hd_qa_view .answer {position:relative; padding:40px 0 40px 50px; height: 20px; font-size: 20px; color:#000; background:#eeeff1; zoom:1; }
+.hd_qa_view .answer {margin-top:60px;}
+.hd_qa_view .question p, 
+.hd_qa_view .answer p {color:#313131;}
+.hd_qa_view .question a { position:absolute; right:50px; top:35px; }
+.hd_qa_view .contents {overflow-x:hidden; word-break:break-all; margin:30px 0 0; padding:30px 50px 50px; font-size: 15px; color: #555; line-height: 30px; width: auto;}
+.hd_qa_view .user_detail {position:relative; padding:18px 0 5px 5px; zoom:1;}
+.hd_qa_view .user_detail dt {float:left; _display:inline; margin:0 4px 0 0; padding:0 0 0 10px; background:url(../img/helpdesk/bu_dash.gif) no-repeat 0 46%; color:#343539; font-weight:bold;}
+
+.hd_mtm_q p {display:none;}
+.hd_mtm_q h3 {padding: 60px 0 20px 7px;}
+
+.hd_mtm_option {margin:0 0 35px 0; padding:0;*zoom:1;}
+.hd_mtm_option  table { border:1px solid #CECCC9;border-width:1px 0 }
+.hd_mtm_option  table .input_text, .hd_mtm_option  table .SelectHelpdesk_selectArea{background: url(../img/common/bg_select_left2.png) no-repeat 0 0;}
+.hd_mtm_option  table .SelectHelpdesk_selectArea a{background: url(../img/common/bg_select_right2.png) no-repeat 100% 0;}
+.hd_tbl_option {table-layout:fixed; border-collapse:collapse; border-spacing:0;}
+.hd_tbl_option th {width:205px; text-align: left; vertical-align: middle; border-bottom:1px solid #e7e7e7; background:#eeeff1;}
+.hd_tbl_option th h4 {padding-left:35px; font-weight:bold; color:#000; font-size:15px; font-weight: normal; }
+:root .hd_tbl_option th h4 {top:2px\0;}
+.hd_tbl_option td {padding:17px 0 17px 30px; border-bottom:1px solid #e7e7e7; color:#000; }
+.hd_tbl_option td *,.hd_tbl_option .SelectHelpdesk_selectArea{vertical-align: middle;}
+.hd_tbl_option td .sep {position:relative;font-size:11px;padding:0 4px;}
+
+.hd_tbl_option input.text {width: 300px;}
+.hd_tbl_option input.long {width:700px;}
+.hd_tbl_option input.file {width:363px; font-size: 13px; color:#000; background: transparent; line-height: 15px; padding: 16px 20px 11px; position: relative; border:1px solid #cccccc;  -webkit-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 0 5px 1px #ededed; box-shadow: inset 0 0 5px 1px #ededed;}
+.hd_tbl_option input.mid {width:205px;}
+.hd_tbl_option input.radio {position:relative; top:-2px; *margin:-4px -3px -3px -3px;}
+.hd_tbl_option input.checkbox {position:relative; top:0; vertical-align:middle; *margin:-4px -3px -3px -3px;}
+.hd_tbl_option label {margin-left:4px}
+.hd_tbl_option textarea {width:717px; height:115px; padding:10px; border:1px solid #cccccc;  -webkit-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 0 5px 1px #ededed; box-shadow: inset 0 0 5px 1px #ededed;}
+.hd_tbl_option .SelectHelpdesk {width:82px; vertical-align:top;}
+
+.hd_tbl_option .question li {float:left; width:148px; height:23px; color:#919191; font-size:14px; }
+.hd_tbl_option .question ul {clear:both; margin:0 0 9px 0; padding:0 0 7px 0; border-bottom:1px solid #D8D7D1; zoom:1;}
+.hd_tbl_option .question ul:after {content:'.'; display:block; clear:both; height:0; overflow:hidden; visibility:hidden;}
+.hd_tbl_option .question li input {position:relative; margin-right:4px;}
+.hd_tbl_option .notice {position:relative; padding:9px 0 8px 0; clear:both; color:#3e74b4;font-size:11px }
+.hd_tbl_option .notice p {}
+
+.hd_tbl_option .hd_lb_id td .checkbox {position:relative; margin:0 0 0 8px;}
+.hd_tbl_option .hd_lb_bank td select {width:135px;}
+.hd_tbl_option .hd_lb_email td select {width:135px;}
+.hd_tbl_option .hd_lb_phone select {width:91px;}
+.hd_tbl_option .hd_lb_phone input.text {width:51px;}
+.hd_tbl_option .hd_lb_alarm strong {margin:0 26px 0 0; font-weight:normal;}
+.hd_tbl_option .hd_lb_alarm label {position:relative; top:-1px; margin:0 15px 0 2px;}
+.hd_tbl_option .hd_lb_file em {position:relative; top:8px; margin:0 0 0 5px; color:#989795;}
+.hd_tbl_option .hd_lb_file p {margin:0 0 -5px 0; padding:10px 20px 0 0; line-height:14px; font-size:11px;}
+.hd_tbl_option .hd_lb_system .system p {height:35px; zoom:1;}
+.hd_tbl_option .hd_lb_system .system p input {float:left; *margin:-4px -3px -3px -3px;}
+.hd_tbl_option .hd_lb_system .system p label {float:left; _display:inline;  width:430px; margin:0 0 5px 5px}
+.hd_tbl_option .hd_lb_system .info {padding:10px 20px 0 0; line-height: 20px;}
+.hd_tbl_option .hd_lb_system .info em {display:block; color:#000;}
+.hd_tbl_option .hd_lb_system .info strong {color:#000; font-weight: normal;}
+.hd_tbl_option .hd_lb_date .input_text {margin-right: 55px;}
+.hd_tbl_option .hd_lb_date img {position: absolute; right: -39px; top: 9px;}
+.hd_tbl_option .hd_lb_date .datepicker {width:92px;}
+.hd_tbl_option .hd_lb_police select {width:135px; margin:0 16px 0 0;}
+.hd_tbl_option .hd_lb_police label {position:relative;}
+.hd_tbl_option .hd_lb_sms input {position:absolute; left:0; top:0; *margin:-4px -3px -3px;}
+.hd_tbl_option .hd_lb_sms p {position:relative; padding:0 30px 0 24px; zoom:1;}
+.hd_tbl_option .hd_lb_sms label {padding:0; margin:0;}
+.hd_tbl_option .hd_lb_jdate select {width: 105px; margin-right: 8px}
+.hd_tbl_option .hd_lb_jumin input.text {width: 119px; }
+.hd_tbl_option .hd_lb_email input.text {width: 119px; }
+.hd_tbl_option .hd_lb_email select {margin-left: 8px;}
+.hd_tbl_option .btn_mypmang {color:#3e74b4;}
+.hd_mtm_option .hd_foot {position:relative;  width: 100%; background:none; text-align:center; *zoom:1; border-top: 0 none;}
+.hd_mtm_option .hd_foot .btn {position:absolute; right:0; top:30px; }
+.hd_mtm_option .hd_foot .btn li {margin-left:4px;}
+.hd_qa_list {margin:60px 0 0 0;}
+.hd_qa_list table.list  {width: 100%; table-layout: fixed; border-top: 1px solid #e7e7e7;}
+	/* col width */
+	.hd_qa_list table.list .num {width: 100px; padding-left: 50px;}
+	.hd_qa_list table.list .category {width: 140px;}
+	.hd_qa_list table.list .stats {width: 150px;}
+	.hd_qa_list table.list .date {width: 100px;}
+	.hd_qa_list table.list .del {width: 80px;}
+.hd_qa_list table.list th, .hd_qa_list table.list td {text-align: left; vertical-align: middle; border-bottom: 1px solid #e7e7e7;}
+.hd_qa_list table.list th {height: 60px; font-weight: normal;}
+.hd_qa_list table.list td {height: 60px;}
+.hd_qa_list table.list .del {text-align: center;}
+.hd_qa_list table.list td p,.hd_qa_list table.list th p {margin-right: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.hd_qa_list table.list td.subject p strong {display: inline-block; width: 140px; font-weight: normal; color:#000;}
+.hd_qa_list table.list td.subject p a strong {display: inline; width: auto;}
+.hd_qa_list table.list td a {color: #000;}
+.hd_qa_list table.list td a:hover {text-decoration: underline;}
+
+
+.hd_qa_list .category {width:120px; text-align:center;}
+.hd_qa_list .num { width:70px; text-align:center;}
+.hd_qa_list .title {text-align:l```eft; }
+.hd_qa_list .title p {position:relative; width:293px;  margin:0 0 0 14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.hd_qa_list .title a {}
+.hd_qa_list .stats { width:100px; text-align:center;}
+.hd_qa_list .stats img {position:relative; vertical-align:top;}
+.hd_qa_list .date { width:72px; text-align:center;}
+.hd_qa_list .del {padding:0; width:42px; text-align:center; vertical-align:middle;}
+.hd_qa_list .del input {width:13px; height:13px; overflow:hidden;}
+.hd_qa_list .line {display:none;}
+.hd_qa_list .no_result{padding:130px 0;text-align:center !important}
+
+.top10px {position:relative; height:25px; border-top:1px solid #e7e7e7; background:none;}
+.top10px .btn li {margin-left:8px;}
+
+.hd_faq_list .search_word {position:relative; padding:60px 50px 30px ; line-height:1.4; background:none; zoom:1;}
+.hd_faq_list .search_word h4 { font-size: 15px; color:#000; font-weight: normal;}
+.hd_faq_list .search_word ol { padding:21px 0 10px 0; color:#000 }
+.hd_faq_list .search_word li { padding:0; font-weight:normal; line-height:18px; }
+.hd_faq_list .search_word table { margin:6px 0 0 0; ;width:100%; table-layout:fixed; }
+.hd_faq_list .search_word col { width:25%; }
+.hd_faq_list .search_word td { font-size:13px; height:40px; border:1px solid #e3e3e3; text-align:center; vertical-align:middle; line-height:1.4; color:#000; background: #f5f6f8;}
+.hd_faq_list .search_word .right td { background:#fff; font-weight:bold;color:#555; }
+.hd_faq_list .search_word .wrong td { background:#fff;}
+.hd_faq_list .search_word li p {padding:9px 0 20px 0; font-weight:normal; color:#000; font-size:11px;}
+
+.helpDesk .hd_inspection {position:relative; height:502px; background:url(../img/helpdesk/bg_inspection.gif) no-repeat;}
+.helpDesk .hd_inspection .back {position:absolute; left:405px; top:535px;}
+
+.hd_personal_info {position:relative; padding:4px 0 0 0; line-height:21px; zoom:1;}
+.hd_personal_info h4 {height:45px; color:#000; font-weight: normal;}
+.hd_personal_info dt {padding:0 0 0 7px; background:url(../img/helpdesk/bu_dot.gif) no-repeat 0 8px;  color:#000;}
+.hd_personal_info dd {padding:0 20px 20px 7px}
+.hd_personal_info p {padding:0 0 0 5px}
+.hd_personal_info p input {position:relative; top:-3px; *top:0; vertical-align:top; *margin:-4px -3px -3px -3px;}
+
+.hd_faq_question .search select { width:141px; }
+
+
+
+/* jQuery UI Datepicker 1.8.18
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ * http://docs.jquery.com/UI/Datepicker#theming */
+.ui-datepicker {display:none; width:210px; margin:1px 0 0 0; padding:17px 9px 10px 9px; background:#FFF; border:1px solid #D7D8DE;}
+.ui-datepicker .ui-datepicker-header { position:relative; }
+.ui-datepicker .ui-datepicker-prev-hover, 
+.ui-datepicker .ui-datepicker-next-hover {}
+.ui-datepicker .ui-datepicker-prev {position:absolute; left:48px; top:0; display:block; width:13px; height:13px; background:url(../img/helpdesk/btn_date_prev.gif) no-repeat; overflow:hidden; text-indent:-5000px; cursor:pointer;}
+.ui-datepicker .ui-datepicker-next {position:absolute; right:48px; top:0; display:block; width:13px; height:13px; background:url(../img/helpdesk/btn_date_next.gif) no-repeat; overflow:hidden; text-indent:-5000px; cursor:pointer;}
+.ui-datepicker .ui-datepicker-prev-hover {}
+.ui-datepicker .ui-datepicker-next-hover {}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span { display:block; position:absolute; left:50%; margin-left:-8px; top:50%; margin-top:-8px;  }
+.ui-datepicker .ui-datepicker-title {padding:1px 0 0 0; height:21px; font-weight:bold; text-align:center; line-height:1.4;}
+.ui-datepicker .ui-datepicker-title select { }
+.ui-datepicker table {border-collapse:collapse; margin:0; }
+.ui-datepicker th {background:#B8B8C0; border:1px solid #ADADB6; color:#FFF; font-size:11px; text-align:center;}
+.ui-datepicker th span {display:block; text-align:center; padding:4px 0 0 0;}
+.ui-datepicker td {width:29px; height:18px; color:#797c81; border:1px solid #E9EAEE; background:#FFF; }
+.ui-datepicker td span,
+.ui-datepicker td a {display:block; text-align:center; padding:5px 0 0 0; text-decoration:none; font-size:11px; color:#797C81;}
+.ui-datepicker td:first-child a {color:#f86300;}
+.ui-datepicker td.first_child a {color:#f86300;}
+.ui-datepicker .ui-datepicker-current-day {background:#B9CDE6; color:#2A73AF; font-weight:bold;}
+.ui-datepicker .ui-state-active {background:#B9CDE6; color:#2A73AF; font-weight:bold;}
+.ui-datepicker .ui-datepicker-today {background-color:yellow;}
+.ui-datepicker .ui-state-highlight {background-color:yellow;}
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+.bbs_page .prev img, .bbs_page .next img{display:none}
+.bbs_page .prev a{background:#e5e5e9 url(../img/helpdesk/bg_prev.png) no-repeat center 10px}
+.bbs_page .prev a:hover, .bbs_page .prev a.on{background:#5d6f9e url(../img/helpdesk/bg_prev.png) no-repeat center -28px}
+.bbs_page .next a{background:#e5e5e9 url(../img/helpdesk/bg_next.png) no-repeat center 10px}
+.bbs_page .next a:hover, .bbs_page .next a.on{background:#5d6f9e url(../img/helpdesk/bg_next.png) no-repeat center -27px}
+/* .hd_lb_category h4 span, .hd_lb_subject h4 span, .hd_lb_text h4 span{background:url(../img/helpdesk/txt_warning.png) no-repeat right 1px;padding-right:45px} */
+
