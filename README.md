@@ -1,4 +1,4 @@
 # MyProject
 
 PC
-- asker https://github.com/nara84/MyProject/blob/master/asker/html/main.html
+- asker http://htmlpreview.github.com/?https://github.com/nara84/MyProject/blob/master/asker/html/main.html
