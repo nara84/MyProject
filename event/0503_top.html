@@ -1,0 +1,165 @@
+<!doctype html>
+<!--[if lt IE 9 ]>
+<html lang="ko" class="ie-legacy"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ko">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>탭소닉탑</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css" />
+    <link href="https://ic-common.pmang.cloud/static/tst/event/2018/0503/css/event.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../css/event.css" rel="stylesheet" type="text/css"> -->
+    <script src="https://ic-common.pmang.cloud/static/common/js/jquery-1.8.3.min.js"></script>
+    <script src="https://ic-common.pmang.cloud/static/tst/event/2018/0503/js/event.min.js"></script>
+    <!-- <script src="../js/event.js"></script> -->
+    <!--
+    tw(번체) 아이템 교환성공 : $ui.resultPopup('<em>恭喜您!</em>禮物已送至郵箱');
+            아이템 교환실패 : $ui.resultPopup('<em>今日兌換次數已滿!</em>請明日再試');
+
+    cn(간체) 아이템 교환성공 : $ui.resultPopup('<em>恭喜您!</em>礼物已送至邮箱');
+            아이템 교환실패 : $ui.resultPopup('<em>今日兑换次数已满!</em>请明日再试');
+
+    en(영어) 아이템 교환성공 : $ui.resultPopup('<em>Congratulations!</em>Rewards are sent to Mailbox.');
+            아이템 교환실패 : $ui.resultPopup('<em>Oops! Today's exchange is full!</em>please try again tomorrow.');
+
+   -->
+</head>
+
+<body>
+
+    <div class="wrapper ">
+        <!-- .kr 한국 / .cn 간체 중국 / .tw 번체 타이완 : 디폴트 영어-->
+        <div class="bg">
+            <img src="https://ic-common.pmang.cloud/static/tst/event/2018/0503/img/main_en.jpg" alt="">
+        </div>
+        <div class="header">
+            <h1>100%환급이벤트</h1>
+        </div>
+        <div class="content">
+            <dl class="refund">
+                <dt>총 환급 횟수</dt>
+                <dd>40</dd>
+            </dl>
+            <ul class="list">
+            <li class="li1"><a href="#" class="btn_reward on" onclick="$ui.resultPopup('축하합니다.<br />선물이 우편함으로 지급되었습니다.');return false;"><span class="text">(<em class="num1">3</em>/50)</span>아이템1 교환하기</a></li>
+            <li class="li2"><a href="#" class="btn_reward off"><span class="text">(<em class="num2">3</em>/50)</span>아이템2 교환하기</a></li>
+            <li class="li3"><a href="#" class="btn_reward ok"><span class="text">(<em class="num3">3</em>/50)</span>아이템3 교환하기</a></li>
+            <li class="li4"><a href="#" class="btn_reward ok">아이템4 교환하기</a></li>
+            <li class="li5"><a href="#" class="btn_reward ok">아이템5 교환하기</a></li>
+            <li class="li6"><a href="#" class="btn_reward off">아이템6 교환하기</a></li>
+            <li class="li7"><a href="#" class="btn_reward ok">아이템7 교환하기</a></li>
+        </ul>
+        </div>
+        <div id="popYN" class="popup" style="display:none;">
+            <div class="bg">
+                <img src="https://ic-common.pmang.cloud/static/tst/event/2018/0503/img/popup.png" alt="" />
+            </div>
+            <div class="msgbox">
+                <p class="desc"></p>
+                <p class="btn">
+                    <a href="#" data-value="true" class="btn_confirm">예</a>
+                    <a href="#" data-value="false" class="btn_cancel">아니오</a>
+                </p>
+            </div>
+        </div>
+        <div id="popResult" class="pop_result" style="display:none;">
+            <div class="bg">
+                <img src="https://ic-common.pmang.cloud/static/tst/event/2018/0503/img/result.png" alt="">
+            </div>
+            <div class="txt"></div>
+            <div class="msgbox">
+                <p class="desc"></p>
+                <p class="btn">
+                    <a href="#" data-value="true" class="btn_confirm">
+                        <em>확인</em>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div id="modalShadow"></div>
+    </div>
+    <!--  개발 시 삭제 -->
+    <style>
+        #ui-helper {
+            z-index: 999999
+        }
+    </style>
+    <script type="text/javascript">
+        $.getScript('http://ndl.ds.neowiz.com/~ji9/ui-helper/js/jquery.ui-helper.js');
+        $.u = {
+            theme: 'legacy', // [flat || mini || legacy]
+            color: '#e81818', // if theme:'flat' ex) [#000000 || red]
+            marginLeft: -300, // start left position
+            animate: false, // start then move left position animation
+            position: 'fixed', // [fixed || absolute || static]
+            top: 200, // panel top position
+            draggable: true, // [true || false]
+            movementX: false, // if draggable, only horizon movement
+            helper: [
+                {
+                    title: '기본 동작',
+                    fold: false, // start then, pane fold [true || false]
+                    items: [
+                        {
+                            subject: '한국',
+                            description: '',
+                            value: 'button',
+                            input: 'button', // [radio || checkbox || button]
+                            checked: false, // default checked option
+                            run: function () {
+                                $('.wrapper').attr('class', 'wrapper kr');
+                                $ui.changeContry();
+                            }
+                        },
+                        {
+                            subject: '중국',
+                            description: '',
+                            value: 'button',
+                            input: 'button', // [radio || checkbox || button]
+                            checked: false, // default checked option
+                            run: function () {
+                                $('.wrapper').attr('class', 'wrapper cn');
+                                $ui.changeContry();
+                            }
+                        }
+                        ,
+                        {
+                            subject: '대만',
+                            description: '',
+                            value: 'button',
+                            input: 'button', // [radio || checkbox || button]
+                            checked: false, // default checked option
+                            run: function () {
+                                $('.wrapper').attr('class', 'wrapper tw');
+                                $ui.changeContry();
+                            }
+                        }
+                        ,
+                        {
+                            subject: '영어',
+                            description: '',
+                            value: 'button',
+                            input: 'button', // [radio || checkbox || button]
+                            checked: false, // default checked option
+                            run: function () {
+                                $('.wrapper').attr('class', 'wrapper ');
+                                $ui.changeContry();
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <!-- 개발 시 삭제 -->
+
+
+
+
+</body>
+
+</html>

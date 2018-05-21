@@ -1,0 +1,131 @@
+<!doctype html><!--[if lt IE 9 ]>
+<html lang="ko" class="ie-legacy"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ko">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title></title>
+    <link href="http://mm.pmang.com/pmang/smart/2018/0322/css/event.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="./css/event.css" rel="stylesheet" type="text/css"> -->
+    <script src="http://www.pmang.com/global/javascript/jq/jquery-1.8.3.min.js"></script>
+    <!-- <script src="http://mm.pmang.com/pmang/smart/2018/0322/js/event.min.js"></script> -->
+    <script src="./js/event.js"></script>
+</head>
+
+<body class="msg_marble">
+
+<div class="wrapper">
+    <div class="bg"><img src="http://mm.pmang.com/pmang/smart/2018/0322/img/main.jpg" alt="" /></div>
+    <div class="header">
+        <h1>돌아온 슬러거 마블</h1>
+    </div>
+    <div class="container">
+        <div class="board">
+            <ol class="list">
+                <li class="b1">1</li>
+                <li class="b2">2</li>
+                <li class="b3">3</li>
+                <li class="b4">4</li>
+                <li class="b5">5</li>
+                <li class="b6">6</li>
+                <li class="b7">7</li>
+                <li class="b8">8</li>
+                <li class="b9">9</li>
+                <li class="b10">10</li>
+                <li class="b11">11</li>
+                <li class="b12">12</li>
+                <li class="b13">13</li>
+                <li class="b14">14</li>
+                <li class="b15">15</li>
+                <li class="b16">16</li>
+                <li class="b17">17</li>
+                <li class="b18 on">18</li>
+            </ol>
+            <span class="piece on">
+                <img src="http://mm.pmang.com/pmang/smart/2018/0322/img/ball_shadow.png" alt="shadow" class="shadow">
+                <img src="http://mm.pmang.com/pmang/smart/2018/0322/img/ball.png" alt="ball" class="ball">
+            </span>
+            <a href="#" class="abtn btn_dice" onclick="diceRoll(5, 'b18'); return false;">주사위굴리기</a><!-- 이동할 칸, 마지막 주사위위치 -->
+            <div class="count">
+                <dl>
+                    <dt>오늘 소모한 배트</dt>
+                    <dd class="txt count1">100</dd>
+                </dl>
+                <dl>
+                    <dt>오늘 획득한 주사위</dt>
+                    <dd class="txt count2">10</dd>
+                </dl>
+                <dl>
+                    <dt>누적 주사위</dt>
+                    <dd class="txt count3">1</dd>
+                </dl>
+                <dl>
+                    <dt>잔여 주사위</dt>
+                    <dd class="txt count4">2</dd>
+                </dl>
+                <dl>
+                    <dt>완주 횟수</dt>
+                    <dd class="txt count5">3</dd>
+                </dl>
+            </div>
+            <a href="#" class="abtn btn_guide" onclick="$ui.popup('howto');return false;">참여방법</a>
+            <a href="#" class="abtn btn_notice" onclick="$ui.popup('warning');return false;">유의사항</a>
+            <a href="#" class="abtn btn_reward on" onclick="$ui.confirmPopup('<em>40회 완주 보상<br />아이템이 지급됩니다.</em>받으시겠습니까?',function(result) {if(result) {$ui.resultPopup('<em>40회 완주 보상<br />아이템을 획득하였습니다.</em>우편함을 확인해주세요!')}});return false;">40회 완주 보상받기</a>
+        </div>  
+    </div>
+    <div id="modalShadow"></div>
+    <div id="popResult" class="pop_result" style="display:none;">
+        <div class="bg">
+            <img src="http://mm.pmang.com/pmang/smart/2018/0322/img/result.png" alt="" />
+        </div>
+        <div class="txt"></div>
+        <div class="msgbox">
+            <p class="desc"></p>
+            <p class="btn">
+                <a href="#" data-value="true" class="btn_confirm">확인</a>
+            </p>
+        </div>
+    </div>
+    <div id="popYN" class="popup" style="display:none;">
+            <div class="bg">
+                <img src="http://mm.pmang.com/pmang/smart/2018/0322/img/popup.png" alt="" />
+            </div>
+            <div class="txt"></div>
+            <div class="msgbox">
+                <p class="desc"></p>
+                <p class="btn">
+                    <a href="#" data-value="true" class="btn_confirm">예</a>
+                    <a href="#" data-value="false" class="btn_cancel">아니오</a>
+                </p>
+            </div>
+    </div>  
+    <div id="popUp" class="popup" style="display:none;">
+        <div class="bg">
+            <img src="http://mm.pmang.com/pmang/smart/2018/0322/img/layer_warning.png" alt="" />
+        </div>
+        <div class="msgbox">
+            <a href="#" data-value="true" class="btn_confirm">확인</a>
+        </div>
+    </div>
+    <!-- 팝업 : 주사위 -->
+    <div class="layer_pop" id="pm_dice">
+        <div class="dim"></div>
+        <div class="pop_body">
+            <div class="dice">
+                <span class="dice_s"></span>
+                <span class="dice_b"></span>
+                <a href="#" class="btn_touch" onclick="$ui.confirmPopup('<em>5000코인<br />아이템이 지급됩니다.</em>받으시겠습니까?',function(result) {if(result) {$ui.resultPopup('<em>5000코인<br />아이템을 획득하였습니다.</em>우편함을 확인해주세요!');}});return false;"><img src="http://mm.pmang.com/pmang/smart/2015/0913/img/btn_touch.png" alt="touch"></a>
+                <!--
+                일일제한 : $ui.resultPopup('<em>일일 제한 횟수를 모두 사용하셨습니다.</em>내일 다시 참여해 주세요');
+                주사위 부족 : $ui.resultPopup('<em>던질 수 있는 주사위가 부족합니다.</em>주사위는 이벤트로 지정된 모드에서<br />획득할 수 있습니다.');
+                완주 보상아이템 : $ui.resultPopup('<em>완주 보상아이템이<br />우편으로 지급되었습니다.</em>');
+                -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

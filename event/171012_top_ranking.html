@@ -1,0 +1,56 @@
+<!doctype html><!--[if lt IE 9 ]>
+<html lang="ko" class="ie-legacy"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ko">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>TAP SONIC TOP</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet" type="text/css" />
+	<link href="http://icw-resource.pmang.cloud/2017/1012/css/event.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="../css/event.css" rel="stylesheet" type="text/css" /> -->
+    <script src="http://icw-resource.pmang.cloud/common/js/jquery-1.8.3.min.js"></script>
+    <!-- <script src="../js/event.js"></script> -->
+    <script src="http://icw-resource.pmang.cloud/2017/1012/js/event.min.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="bg"><img src="http://icw-resource.pmang.cloud/2017/1012/img/main.jpg" alt="" /></div>
+    <div class="header">
+        <h1 class="tit"><img src="http://icw-resource.pmang.cloud/2017/1012/img/ti.png" alt="grand grand" /></h1>
+        <em class="text">Prix Opening</em>
+    </div>
+    <div class="point">
+        <dl>
+            <dt>Current Times</dt>
+            <dd class="num1">115</dd><!-- //mission count -->
+        </dl>
+    </div>
+    <ul class="list">
+        <li class="li0"><a href="#" class="btn_reward ok" onclick="return false;">Everyday gift</a></li>
+        <li class="li1"><a href="#" class="btn_reward off" onclick="return false;">10times gift</a></li>
+        <li class="li2"><a href="#" class="btn_reward on" onclick="$ui.resultPopup('Congratulations!<br />Reward was sent to Mailbox.');return false;">20times gift</a></li>
+        <li class="li3"><a href="#" class="btn_reward on" onclick="$ui.resultPopup('Congratulations!<br />Reward was sent to Mailbox.');return false;">50times gift</a></li>
+        <li class="li4"><a href="#" class="btn_reward off" onclick="return false;">80times gift</a></li>
+    </ul><!-- //list button .ok 받기완료, .on 받기활성화, .off 받기비활성화 -->
+    <div id="modalShadow"></div>
+    <div id="popResult" class="pop_result" style="display:none;">
+        <div class="bg">
+            <img src="http://icw-resource.pmang.cloud/2017/1012/img/result.png" alt="" />
+        </div>
+        <div class="txt"></div>
+        <div class="msgbox">
+            <p class="desc"><b></b></p>
+            <p class="btn">
+                <a href="#" data-value="true" class="btn_confirm">확인</a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
