@@ -14,3 +14,9 @@ PC
 - 탭소닉2 http://htmlpreview.github.com/?https://github.com/nara84/MyProject/blob/master/사전예약/tsn_full_v2.html
 
 MOBILE
+- 마블 http://htmlpreview.github.com/?https://github.com/nara84/MyProject/blob/master/event/0322_msg_event.html
+- 다국어 http://htmlpreview.github.com/?https://github.com/nara84/MyProject/blob/master/event/0503_top.html
+- 이벤트(프론트엔드) http://htmlpreview.github.com/?https://github.com/nara84/MyProject/blob/master/event/170712_bdt_devil.html
+- 이벤트 http://htmlpreview.github.com/?https://github.com/nara84/MyProject/blob/master/event/171012_top_ranking.html
+- 반응형이벤트 http://htmlpreview.github.com/?https://github.com/nara84/MyProject/blob/master/event/kakao_full.html
+
